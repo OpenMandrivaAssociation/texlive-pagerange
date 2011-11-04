@@ -1,3 +1,9 @@
+# revision 16915
+# category Package
+# catalog-ctan /macros/latex/contrib/pagerange
+# catalog-date 2010-02-04 09:04:58 +0100
+# catalog-license lppl
+# catalog-version 0.5
 Name:		texlive-pagerange
 Version:	0.5
 Release:	1
@@ -41,6 +47,7 @@ page numbers) and standardising them.
 %doc %{_texmfdistdir}/doc/latex/pagerange/README
 %doc %{_texmfdistdir}/doc/latex/pagerange/pagerange-guide.pdf
 %doc %{_texmfdistdir}/doc/latex/pagerange/pagerange-guide.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ page numbers) and standardising them.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
