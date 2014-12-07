@@ -6,7 +6,7 @@
 # catalog-version 0.5
 Name:		texlive-pagerange
 Version:	0.5
-Release:	8
+Release:	9
 Summary:	Flexible and configurable page range typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pagerange
