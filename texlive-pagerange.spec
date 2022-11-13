@@ -1,18 +1,12 @@
-# revision 16915
-# category Package
-# catalog-ctan /macros/latex/contrib/pagerange
-# catalog-date 2010-02-04 09:04:58 +0100
-# catalog-license lppl
-# catalog-version 0.5
 Name:		texlive-pagerange
-Version:	0.5
-Release:	12
+Version:	16915
+Release:	1
 Summary:	Flexible and configurable page range typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pagerange
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ of page numbers, expanding them (e.g., adding first or large
 page numbers) and standardising them.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,24 +35,10 @@ page numbers) and standardising them.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5-2
-+ Revision: 754626
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-1
-+ Revision: 719182
-- texlive-pagerange
-- texlive-pagerange
-- texlive-pagerange
-- texlive-pagerange
-
