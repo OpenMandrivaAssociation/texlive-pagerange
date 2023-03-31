@@ -1,6 +1,6 @@
 Name:		texlive-pagerange
 Version:	16915
-Release:	1
+Release:	2
 Summary:	Flexible and configurable page range typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pagerange
