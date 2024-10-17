@@ -3,7 +3,7 @@ Version:	16915
 Release:	2
 Summary:	Flexible and configurable page range typesetting
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pagerange
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pagerange
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pagerange.doc.r%{version}.tar.xz
